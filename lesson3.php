@@ -28,17 +28,19 @@ function drawLine($length)
 function drawChristmasTree($level, $console)
 {
     // $level = total levels
-
+    $leaves = [
+        '&#9770', '&#9731', '&#9748', '&#9752'
+    ];
     for ($i = 1; $i <= $level; $i++) {  // $i = current level
         for ($j = 1; $j <= ($level - $i); $j++) {    //$j : current space
             if ($console) {
                 echo ' ';  // space in console
             } else {
-                echo '&nbsp;&nbsp;'; // space in browser
+                echo '&nbsp;&nbsp;&nbsp;&nbsp;'; // space in browser
             }
         }
         for ($k = 1; $k <= $i * 2 - 1 ; $k++) {
-            echo '*';
+            echo $leaves[rand(0, 3)];
         }
         if ($console) {
             echo "\n";  // enter in console
@@ -83,7 +85,7 @@ function drawChristmasTree($level, $console)
 
 // myloop(500000000);
 $isConsole = (php_sapi_name() == 'cli') ? true : false;
-drawChristmasTree(40, $isConsole); // invoke call
+drawChristmasTree(10, $isConsole); // invoke call
 
 // in browser
 // \n = <br>

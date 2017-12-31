@@ -40,6 +40,10 @@
             <li> <a href="http://trademe.co.nz">http://trademe.co.nz</a> </li>
             <li><a href="https://www.w3schools.com" target=_blank>W3 Schools</a></li>
             <li><a href="http://youtube.com" target=_blank>Youtube</a></li>
+            <a href="lesson4.php">Home</a>
+    <a href="school.php">My School</a>
+    <a href="about.php">About Me</a>
+    <p>Hello, this is my school</p>    
         </ul>
         <br>
         <div class="card" id="test">
